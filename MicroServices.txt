@@ -1,6 +1,8 @@
 MicroServices Nedir ? Neden MicroServices Tercih Etmeliyiz ?
 
-MicroServices Tercih Etmemizin 4 Ana Sebebi Var:
+
+
+# MicroServices Avantajları:
 
 1=> Ölçeklenebilirlik
 2=> Esneklik
@@ -55,5 +57,15 @@ MicroServices Tercih Etmemizin 4 Ana Sebebi Var:
  
      Ayrıca development sürecinde servis dağıtımında developer yetkinliğine göre dağıtılabilir.
 
+
+# MicroServices Dezavantajları
+
+- Servis Yönetimi yapılması gerek. çalışan instance ların ip adressleri bilgileri tutulmalı ve bu bileşenlerin yönetilmnesi gerekli.
+  Servis Bağlantıları kontrol edilmeli. Bunlar ayrı bir zorluk gerektiriyor.
+  Her servisin bağımlılıkları iyi yönetilmeli.
+  Her servis biribirinden bağımsız olmalı ve birbirlerine az ihtiyaç duymalı. Bunun kontrolü yapılması gerekli.
+  Her servisin versionu aynı olmalı.
+  Her servis tek bir işi doğru bir şekilde yapmalı.
+  Bunların kontrolu zordur ve yapılmalıdır.
 
 
