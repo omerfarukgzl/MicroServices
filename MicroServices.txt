@@ -87,5 +87,3 @@ Farklı programlama dillerinde geliştirilebilir ve farklı veri tabanı teknolo
 - Servis Yönetimi yapılması gerek. çalışan instance ların ip adressleri bilgileri tutulmalı ve bu bileşenlerin yönetilmesi gerekli.
   Servis Bağlantıları kontrol edilmeli. Bunlar ayrı bir zorluk gerektiriyor.
 
-
-

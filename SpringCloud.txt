@@ -1,0 +1,48 @@
+
+# Spring Cloud Nedir?
+
+MicroServices mimarisindeki bahsedilen zorluklar ve yapılması gereken önemli hususların 
+Örneğin servislerin bağlantısı, yük dengesinin kurulması, port bilgilerinin tutulması gibi zorukların çözümü için yapı sunan kütüphanedir.
+
+ Spring Cloud içerisinde yer alan hizmetler ile birlikte mikroservis mimarileri baştan sona tasarlayabiliriz. 
+Spring Cloud’un özelliklerine ve hizmetlere bakalım.
+
+
+Özellikleri
+Load Balancing
+Mikroservislerimizin trafik dengelemesini izleyebilir, yönetebilir, dağıtabiliyoruz.
+
+Dağıtık Konfigürasyon
+Her mikroservisin ayrı bir konfigürasyon dosyamız olsa da, global bir konfigürasyon da yapılandırabilmekteyiz.
+
+Global locks
+Mikroservislerimizin thread işlemlerini işlem boyunca koruyan ve başka bir thread gelmemesini sağlayan önemli bir özelliktir.
+
+
+
+Hizmetler
+Apı Gateway
+Mikroservislerimizin birbirine bağlanmasını sağlamaktadır. Servislerimizi yönetebilmemize olanak sağlamaktadır.
+
+Config Server
+Yazdığımız microservice’lerin config’lerini ortak bir yerden yönetmemizi sağlar.
+
+Service Registry
+Host ettiğimiz microservice’leri startup ‘da service registry’e kayıt ederek
+http akışlarını ve ayağa kaldırdığımız servislerin url ve port bilgilerini kullanarak daha rahat route etmemizi sağlayan yapıdır.
+
+Service Discovery
+Mikroservislerimizin birbirlerinden haberdar olarak çalışmasına olanak sağlayan hizmettir.
+
+Circuit Breakers
+Mikroservislerimizde oluşan hataların kendine has özelliklerini kullanarak servislerimizin sağlıklı çalışmasını sağlayan olanaklar sunmaktadır.
+
+
+
+
+
+
+
+
+
+
