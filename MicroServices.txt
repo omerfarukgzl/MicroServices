@@ -1,6 +1,30 @@
 MicroServices Nedir ? Neden MicroServices Tercih Etmeliyiz ?
 
 
+# MicroServices Nedir ?
+
+Microservice tek başına tek sorumluluğu olan ve tek iş yapan sadece o işe ait işleri yürüten modüler projelerdir.
+Adından da anlaşılacağı gibi,microserviceler temelde bir yazılım uygulamasında belirli özellik yada fonksiyonu sağlayan, 
+tek bir amaca hizmet eden, birbirinden bağımsız yazılım servislerdir. Bu hizmetler bağımsız olarak bakımı yapılabilir, izlenebilir ve dağıtılabilir yapıya sahip olmalıdır..
+
+
+
+# MicroServices Mimari Nedir ?
+
+Microservice mimarisi, tek bir uygulama geliştirirken modüler bir yapıda her biri küçük servis olarak düşünülmesi gereken ve her bir servisinde kendi işini ve iletişimini yürütebilen, 
+çok karmaşık olmayan ve başka servislere bağımlılığı az olan mekanizmalara sahip bir yaklaşımdır. 
+Bu servisler kendilerinin sorumlu olduğu tek bir işe odaklı ve bağımsız çalışabilen, otomatize bir deployment mekanizmasına sahip bir yapıdadır. 
+Merkezi yönetim mekanizmalarından oldukça arındırılmış olmalıdır. 
+Farklı programlama dillerinde geliştirilebilir ve farklı veri tabanı teknolojileri kullanılabilir
+
+  Her servisin bağımlılıkları iyi yönetilmeli.
+  Her servis biribirinden bağımsız olmalı ve birbirlerine az ihtiyaç duymalı. Bunun kontrolü yapılması gerekli.
+  Her servisin versionu aynı olmalı.
+  Her servis tek bir işi doğru bir şekilde yapmalı.
+
+
+
+
 
 # MicroServices Avantajları:
 
@@ -60,12 +84,8 @@ MicroServices Nedir ? Neden MicroServices Tercih Etmeliyiz ?
 
 # MicroServices Dezavantajları
 
-- Servis Yönetimi yapılması gerek. çalışan instance ların ip adressleri bilgileri tutulmalı ve bu bileşenlerin yönetilmnesi gerekli.
+- Servis Yönetimi yapılması gerek. çalışan instance ların ip adressleri bilgileri tutulmalı ve bu bileşenlerin yönetilmesi gerekli.
   Servis Bağlantıları kontrol edilmeli. Bunlar ayrı bir zorluk gerektiriyor.
-  Her servisin bağımlılıkları iyi yönetilmeli.
-  Her servis biribirinden bağımsız olmalı ve birbirlerine az ihtiyaç duymalı. Bunun kontrolü yapılması gerekli.
-  Her servisin versionu aynı olmalı.
-  Her servis tek bir işi doğru bir şekilde yapmalı.
-  Bunların kontrolu zordur ve yapılmalıdır.
+
 
 
