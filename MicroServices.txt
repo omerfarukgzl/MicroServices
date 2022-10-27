@@ -1,0 +1,59 @@
+MicroServices Nedir ? Neden MicroServices Tercih Etmeliyiz ?
+
+MicroServices Tercih Etmemizin 4 Ana Sebebi Var:
+
+1=> Ölçeklenebilirlik
+2=> Esneklik
+3=> CI/CD Kolaylığı 
+4=> Teknoloji Çeşitliliği
+
+
+* Ölçeklenebilirlik 
+ - Bir uygulamanın dikey veya yatay olarak ölçeklenebilmesidir.
+    
+    - Dikey ölçeklenebilme donanımsal olarak gerçekleşir.
+      Örneğin ram yetersizliği durumunda veya depolama yetersizliği durumunda kaynakları duruma göre arttırıp azaltmaktır.
+      Fakat dikey ölçekleneilirliğin sınırı vardır. Sınır dolduğu zaman yeni donanım alınmalıdır.
+    
+    - Yatay ölçeklenebilme ise yatay olarak servisin veya uygulamanın bir kopyasını oluşturmaktır.
+       Yatay ölçeklenebilme dikey ölçeklenebilmeye göre daha zordur fakat daha ucuzdur.
+
+
+* Esneklik 
+ - Kodsal bir hatanın veya herhangi bir servisteki hatanın tüm uygulamayı etkilememesi tüm uygulamanın çökmemesi ile tanımlanabilir.
+   örnek olarak instagramdaki like buton servisi 20 sn liğine patladığı zaman instagram uygulamasının tümü patlamaz.
+
+   
+
+
+* CI/CD Kolaylığı ( Continuous integration / Continuous delivery)
+  
+  - Continous integration 
+    Sürekli entegrasyon, kod üzerinde yapılan değişiklik sonrasında sistemin çalışır durumda olduğunu,
+    yapılan değişikliğin sorunlara yol açmadığını tespit etmek için kullanılan yöntemdir.
+    
+
+  - Continuous delivery 
+    Sürekli teslimat, sürekli entegrasyonun doğal bir uzantısıdır.
+    Sürekli teslimat, başarılı olan bir yapıyı (build) bir ortama atma durumunun otomatik olan yoludur. 
+     - Örnek verecek olursak; 
+	Netflix, tamamen otomatik bir sürekli dağıtım sistemine sahiptir. 
+	Dağıtımlar otomatik olduğundan ve herhangi bir zamanda gerçekleşebileceğinden, 
+	uygulamanız, yeni bir sürüm dağıtıldığında geçici kesintilerden etkilenmeyecek şekilde tasarlanmalıdır.
+ 
+  - Uygulamamız daha küçük parçalara bölündüğü için dağıtımı kolay ve monlitik yapıda uygulamanın ayağı kalkma süresi uzun olması problemi
+      uygulamayı servislere bölüdüğümüz için herhangi bir servisin geç ayağı kalkması ile uygulamanın fazla etkilenmemesi ile çözülür.
+     Veya herhangi bir zaman diliminde gelen yoğun istek üzerine iş yükü fazla olması sebebi ile instance sayısı ayarlanabilir. 
+     Yani dağıtım (deployment) sürecinde kolaylık sağlar.
+
+
+   
+* Teknoloji Çeşitliliği
+   - Kullanılacak dil veya teknolojiler servislere özgü kullanılabilir.
+     Diğer servisler bu teknolojileri bilmek zorunda değiller. 
+     çünkü amaç sadece servislerin haberleşmesidir. Aynı formatta uygun formatta haberleştikleri sürece kullanılan teknolojiler birbirinden bağımsız ve özgürdür.
+ 
+     Ayrıca development sürecinde servis dağıtımında developer yetkinliğine göre dağıtılabilir.
+
+
+
