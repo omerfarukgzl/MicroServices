@@ -116,18 +116,44 @@ Farklı programlama dillerinde geliştirilebilir ve farklı veri tabanı teknolo
 - Resilience (Dayanıklılık) 
   -- Uygulamanın farklı iş yüklerindeki hatalara rağmen çalışmaya devam edebilmesi
 
+
 - Scalability (ölçeklenebilirlik)
   -- İş yükü artan servisin ölçeklenenilmesi
+
 
 - Fault Isolation (arıza izolasyonu)
  -- Çeşitli servislere atılan istek doğrultusunda herhangi bir serviste gelen arızaya rağmen diğer servislerden istek cevaplarını alıp çalışmaya devam edebilme
 
+
+
 - CAP Theorem:
  -- Consistency (tutarlılık)
-   --- 
+   --- Dağıtık sistemlerde güncellenen her bilgiyi yeni bir güncelleme alana kadar güncel halini alabilmeliyiz.
 
- -- Availability (kullanılabilirlik)
-   ---
+ -- Availability (Erişebilirlik)
+   --- Dağıtık olan sunuculara her zaman istek attığımızda cevap alınabilmeli. örneğin 5 sunucdan 1 inden cevap alınamadığında error yerine 4 ünden cevap alınmış halde cevap verilmeli.
 
- -- Partition Tolarance (bölme toleransı)
-   --- 
+ -- Partition Tolarance (Bölünebilme  toleransı)
+   --- Ağınızdaki sunucuların arasındaki bağlantı gittiğinde de çalışmaya devam edebilme.
+
+
+- ACID
+ -- Atomicity
+    ---Transaction işlemini bir bütün olarak görür. 
+       İşlem sırasında birden fazla veritabanı/tablodaki verinin güncellenmesi gerçekleşiyor ise tüm bunların hepsi birden başarılı olacaktır veya başarısız olacaktır
+	Veritabanları erişilemez olabilir.
+	Network problemi olabilir.
+	Herhangi bir hata oluşabilir.
+	Bu durumda işlem geçersiz sayılacaktır.
+
+ -- Consistency (Tutarlılık) 
+   --- Transaction işlemi sonucunda veritabanındaki verinin geçerli durumunun, bir sonraki geçerli duruma geçmesidir. 
+       Özetle Transaction tam anlamı ile gerçekleşinceye kadar (constraints, cascades, triggers) işlemden etkilenen verilerin değerlerinin bir önceki geçerli değeri vermesidir.
+
+ -- Isolation (izolasyon) 
+   --- Aynı anda aynı veri üzerinde birden fazla Transaction değiştirme gereksinimi olabilir. 
+       Transaction’ların birbirlerinin işlemlerinden etkilenmemesi için işlemler Seri olarak yapılması gerekir. 
+       Transaction sırasında ilgili ve etkilenecek veri setleri kilitlenir. Taki işlem başarılı ve başarısız olarak sonuç dönünceye kadar.
+
+ -- Durability (Dayanıklılık) 
+   ---Transaction sırasında fiziksel veya işlemsel bir hata olması durumunda sistemin kendisini bir önceki geçerli veri durumuna döndürebilme kabiliyetidir.
