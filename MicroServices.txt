@@ -111,6 +111,23 @@ Farklı programlama dillerinde geliştirilebilir ve farklı veri tabanı teknolo
 
 
 
+# MicroServices Terminolojisi
 
+- Resilience (Dayanıklılık) 
+  -- Uygulamanın farklı iş yüklerindeki hatalara rağmen çalışmaya devam edebilmesi
 
+- Scalability (ölçeklenebilirlik)
+  -- İş yükü artan servisin ölçeklenenilmesi
 
+- Fault Isolation (arıza izolasyonu)
+ -- Çeşitli servislere atılan istek doğrultusunda herhangi bir serviste gelen arızaya rağmen diğer servislerden istek cevaplarını alıp çalışmaya devam edebilme
+
+- CAP Theorem:
+ -- Consistency (tutarlılık)
+   --- 
+
+ -- Availability (kullanılabilirlik)
+   ---
+
+ -- Partition Tolarance (bölme toleransı)
+   --- 
