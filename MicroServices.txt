@@ -87,3 +87,30 @@ Farklı programlama dillerinde geliştirilebilir ve farklı veri tabanı teknolo
 - Servis Yönetimi yapılması gerek. çalışan instance ların ip adressleri bilgileri tutulmalı ve bu bileşenlerin yönetilmesi gerekli.
   Servis Bağlantıları kontrol edilmeli. Bunlar ayrı bir zorluk gerektiriyor.
 
+
+
+# MicroServices Ne Değildir ?
+
+ Örneğin Klavyedeki her tuş bir iş ve bu iş için oluşturulan servis olsun ve bu örnek üzerinden anlatalım
+
+- Birden fazla domain iş yükünü barındıran makro projeler microservice değildir!
+   -- Yani her servis bir iş yükünü barındırmalıdır. Yani proje olabildiğince küçük servislere bölünmeli ve her servis bir işden sorumludur.
+      Örnekde olduğu gibi yazılan bir servis birden fazla tuşu kapsamamalıdır. Her servis bir tuş iş yükü için yazılmalıdır. 
+
+- Tek başına bağımsız deployment yapılamayan projeler microservice değildir!
+  -- Yani yazılan bir servis tek başına deployment edilebilmelidir. Diğer servisler bu olaydan etkilenmemelidir.
+     Örnekde olduğu gibi herhangi bir tuş söküp takıldığı zaman diğer tuşlar bu tuşun bu olayından etkilenmemelidir.
+ 
+- Başka projelere bağımlılık oluşturan projeler microservis değildir!
+  -- Örnekde olduğu gibi sökülen bir tuşun fonksiyonunu değiştirip tekrar takıldığı zaman bu değişimden dolayı başka bir tuşun değişime ihtiyacı olmaması gerekir.
+
+
+- Bir iş akışına ait bir sürecin ölçeklenemediği projeler microservice değildir!
+  -- Yani herhangi bir servisin iş yükü arttığı zaman bu servisin kopyasından oluşturabilip sunucu sayısı arttırılabilmelidir.
+
+
+
+
+
+
+
